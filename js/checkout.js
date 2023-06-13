@@ -1,32 +1,9 @@
+const products = localStorage.getItem("products");
+const like = localStorage.getItem("likes")
+const cartCounter = localStorage.getItem("cart");
 
-
-
-
-/* When the checkout page is loaded you have to get the products from the
-    localstorage and 
-    display them as cart lines (product name and quantity) and display the subtotal 
-    and 
-    the tax and the total price
-
-
-
-
-
-    The tax should be 
-- 10% when you select pay by paypal, 
-- 15% on the cheque 
-- 5% with the bank transfer option
-
-
-
-
-You have to implement the common validations on the billing address form
-
-When you click place order button you have 
-    to post a request to [http://localhost:5000/api/orders/] API, 
-    remember thar add order API required a token first (you have to be logged in first)
-*/
-
+document.getElementById("likesCounter").innerHTML = like;
+document.getElementById("cartCounter").innerHTML = JSON.parse(cartCounter).length;
 
 document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem("token");
@@ -34,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
         location.href = "./login.html"
     };
     const user = parseJwt(token);
-    // getting cart items from local storage
     const cartItems = JSON.parse(localStorage.getItem("cart") || "[]" );
     let subTotal = 0;
     for (let i = 0; i < cartItems.length; i++) {
@@ -57,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(subTotal);
 
     const tax = document.querySelectorAll("input[name='payment']");
-    // calculate tax
     for (let i = 0; i < tax.length; i++) {
         tax[i].addEventListener("click", function() {
             const value = tax[i].value;
