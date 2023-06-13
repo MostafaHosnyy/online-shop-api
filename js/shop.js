@@ -1,4 +1,10 @@
 const products = localStorage.getItem("products");
+const like = localStorage.getItem("likes")
+const cartCounter = localStorage.getItem("cart");
+
+document.getElementById("likesCounter").innerHTML = like;
+document.getElementById("cartCounter").innerHTML = JSON.parse(cartCounter).length;
+
 class List {
     constructor() {
       this.containerProdect = JSON.parse(products);
