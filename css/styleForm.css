@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  height: 100vh;
+  --font-family-sans-serif: "Roboto", sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+}
+.left{
+  width: 40%;  
+  background-color: #3D464D;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nameBrand h3{
+  color: #FFD333;
+  font-size: 60px;
+}
+.nameBrand h3 span{
+background-color: #FFD333;
+color: #3D464D;
+}
+form {
+  position: relative;
+  max-width: 26em;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 5px 5px lightgrey;
+  margin: 3em ;
+  padding: 3em ;
+  box-sizing: border-box;
+}
+form:after {
+  position: absolute;
+  width: 1em;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background: #FFD333;
+}
+
+input {
+  width: 100%;
+  padding: .4em .5em;
+  background-color: #F2F2F2;
+  border: 1px solid #F2F2F2;
+  border-radius: .2em;
+}
+input:focus {
+  outline: none;
+  border: 1px solid #FFD333;
+}
+label {
+  width: 100%;
+  margin-top: 1em;
+  font-size: 1em;
+}
+button {
+  padding: .5em 3em;
+  background-color: #3D464D;
+  color:  #FFD333;
+  margin-top: 2em;
+  font-weight: 400;
+  font-size: 1em;
+  border: none;
+
+  cursor: pointer;
+}
+.formHeader {
+  color: #3D464D;
+  font-size: 2em;
+}
+.formClick{
+  text-align: center;
+}

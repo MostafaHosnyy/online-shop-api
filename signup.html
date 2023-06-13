@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="css/styleForm.css">
+</head>
+<body>
+  <div class="left">
+    <a class="nameBrand"><h3>MULTI <span>SHOP</span></h3></a>
+  </div>
+  <div class="right">
+    <form id="myForm">
+      <div class="formHeader">
+        <p>SIGN UP</p>
+      </div>
+      <label for="firstName">
+        First Name
+        <input type="text" name="First Name" id="firstName" onfocusout="validatefirstName()">
+        <p class="helper-text"></p>
+      </label>
+      <label for="lastName">
+        Last Name
+        <input type="text" name="Last Name" id="lastName" onfocusout="validatelastName()">
+        <p class="helper-text"></p>
+      </label>
+      <label for="email">
+        Email
+      <input type="email" name="Email"  id="email" onfocusout="validateEmail()">
+      <p class="helper-text"></p>
+
+    </label>
+      <label for="password">
+        Password
+        <input type="password" name="Password" id="password" onfocusout="validatePassword()">
+        <p class="helper-text"></p>
+      </label>
+      <button  type="button" onclick="singup()">Continue</button>
+    </form>
+    <div class="formClick">
+      <p>Do You Have An Account</p>
+      <a href="login.html">login</a>
+    </div>
+    <a href="index.html">Home Page</a>
+  </div>
+  <script src="js/validations.js"></script>
+  <script src="js/signup.js"></script>
+
+</body>
+</html>
